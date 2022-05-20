@@ -1,10 +1,11 @@
 import pygame # pip install pygame
+import random
 
 #initialize the pygame framework
 pygame.init()
 
 #Create a window (display surface)
-GAME_FOLDER = 'C:/Users/91870/OneDrive/Desktop/python/'
+GAME_FOLDER = 'C:/Users/91870/OneDrive/Desktop/Feed-the-Dragon/'
 WINDOW_WIDTH = 1400
 WINDOW_HEIGHT = 700
 display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
@@ -19,9 +20,22 @@ background_image = pygame.transform.scale( pygame.image.load(GAME_FOLDER + 'drag
 
 #Game Actors
 dragon = pygame.image.load(GAME_FOLDER + 'dragon.png')
-dragon_x = WINDOW_WIDTH - 80
-dragon_y = 100
+# dragon_x = WINDOW_WIDTH - 80
+# dragon_y = 100
+dragon_rect = dragon.get_rect()
+dragon_rect.left = 0
+dragon_rect.right = 400
 dragon_velocity = 5
+s
+# adding coin
+coin = pygame.image.load(GAME_FOLDER + 'coin.png')
+# coin_x = 0
+# coin_y = 100
+coin_rect = coin.get_rect()
+coin_rect.left = 0
+coin_rect.right = 400
+
+
 
 #main game loop (life of the game)
 FPS = 60

@@ -24,7 +24,7 @@ A Simple game made by using Pygame
   </a>
   
   <h2>Preview...</h2>
-  <img src="https://github.com/dheerajrao20/Dashboard-Sidebar/blob/main/Images/thumbnail.png?raw=true" />
+  <img src="https://github.com/dheerajrao20/Feed-the-Dragon/blob/main/screenshot.png?raw=true" />
   
 # 🎇How To Contribute 🎇
 

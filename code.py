@@ -3,12 +3,13 @@ import random
 
 pygame.init()
 
-GAME_FOLDER = 'C:/Users/91870/OneDrive/Desktop/fd/'
-WINDOW_WIDTH = 1400
-WINDOW_HEIGHT = 700
+GAME_FOLDER = 'C:/Users/91870/OneDrive/Desktop/Feed-the-Dragon/'
+WINDOW_WIDTH = 1500
+WINDOW_HEIGHT = 750
 display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption('Feed the Dragon')
-background_image = pygame.transform.scale(pygame.image.load(GAME_FOLDER + 'dragon_night.jpg'), (WINDOW_WIDTH, WINDOW_HEIGHT))
+background_image = pygame.transform.scale(pygame.image.load(GAME_FOLDER + 
+'dragon_night.jpg'), (WINDOW_WIDTH, WINDOW_HEIGHT))
 #game dragon
 dragon = pygame.image.load(GAME_FOLDER + 'dragon.png')
 dragon_rect = dragon.get_rect()
@@ -19,7 +20,8 @@ dragon_velocity = 5
 # coin animation
 coins = []
 for i in range(6):
-    coins.append(pygame.transform.scale(pygame.image.load(GAME_FOLDER + 'coin/'+str(i) + '.png'), (32,32)))
+    coins.append(pygame.transform.scale(pygame.image.load(GAME_FOLDER +
+     'coin/'+str(i) + '.png'), (32,32)))
 coin_index = 0
 coin_rect = coins[coin_index].get_rect()
 coin_rect.left = 0
@@ -136,7 +138,6 @@ while running:
             coin_velocity = 5
             coin_rect.left = -150
             coin_rect.top = random.randint(100, WINDOW_HEIGHT - coin_rect.height)
-            # player_score -= 1
             player_lives -= 1
             if(player_lives>1):
                 lives = small_game_font.render('Lives: ' + str(player_lives), True, WHITE)
